@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+        background: rgb(194, 152, 204);
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificação da nacionalidade</h1>
+    Qual seu país de origem? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="OK" onclick="verificar()">
+    <p><strong>Obs: A primeira letra deve ser maiúscula e as outras devem ser minúsculas.</strong></p>
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+        var txtp = document.getElementById('txtpais')
+        var res = document.querySelector('div#res')
+        var pais = txtp.value
+        if (pais != 'Brasil') {
+            res.innerHTML = `<p>Você é <strong>estrangeiro</strong>.</p>`
+        } else {
+            res.innerHTML = `<p>Você é <strong>Brasileiro</strong>.</p>`
+        }
+        }
+    </script>
+</body>
+</html>
